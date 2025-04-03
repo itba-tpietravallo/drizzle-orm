@@ -10,6 +10,8 @@ jobs:
       packages: write # allow GITHUB_TOKEN to publish packages
     steps:
       - uses: actions/checkout@v4
+        with:
+          sparse-checkout: 'drizzle-kit'
       - uses: actions/setup-node@v3
         with:
           node-version: "20"
