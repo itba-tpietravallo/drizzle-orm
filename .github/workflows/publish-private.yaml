@@ -14,7 +14,8 @@ jobs:
           sparse-checkout: 'drizzle-kit'
       - name: Debug
         run: |
-            npm i
+            cd drizzle-kit
+            npm i --legacy-peer-deps
             npm run build
             pwd
             ls -la
