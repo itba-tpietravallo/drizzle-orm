@@ -1469,7 +1469,7 @@ WHERE
 						// skip range and tuples
 						if (columnTypeMapped.includes('tuple<') || columnTypeMapped.includes('range')) continue;
 
-						columnTypeMapped = trimChar(columnTypeMapped, '"');
+						columnTypeMapped = trimChar(columnTypeMapped, '"').toLowerCase();
 						columnTypeMapped = columnTypeMapped.replace('pg_catalog.', '');
 
 						// patching array types
